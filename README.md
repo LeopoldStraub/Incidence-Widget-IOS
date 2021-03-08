@@ -8,4 +8,6 @@ Corona Inzidenz Widget für Ipad/IPhone
         - Scriptable Widget zu Homescreen hinzufügen  
         - Die erstellte Datei als auszuführendes Skript auswählen  
         - Widgetparameter setzen (Landkreis(e) als Nummer durch Komma getrennt, z.B. "227,35,156")  
-        - Nummer der Landkreise mit RKI API suchen: [](https://rki-covid-api.now.sh/api/districts)
+        - Nummer der Landkreise mit RKI API suchen: [](https://rki-covid-api.now.sh/api/districts)  
+        [](https://github.com/StrDev00/Incidence-Widget-IOS/blob/main/Datei_000.png)
+![Screenshot](Datei_000.png)
