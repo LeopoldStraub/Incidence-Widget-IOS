@@ -1,0 +1,48 @@
+async function loadBY(url){
+    let param = 227;
+    if(args.widgetParameter != null){
+        
+        param = args.widgetParameter.split(',');
+    }
+    
+    
+    
+    let req = new Request(url);    
+    let json = await req.loadJSON();
+    let layout = new ListWidget();
+    
+    for(let i in param){
+        console.log(param[i]);
+        addDataView(layout, (Math.round((json.districts[param[i]].weekIncidence 
+        + Number.EPSILON) * 100) / 100)
+         + "", json.districts[param[i]].name, "Inzidenz");
+    }
+    
+    return layout
+    
+}
+
+
+function addDataView(root, data, location, desc){        
+    let stack = root.addStack();    
+     stack.layoutVertically();
+     stack.useDefaultPadding();    
+
+     let vDesc = stack.addText(desc);
+    vDesc.font = Font.thinMonospacedSystemFont(14);
+    
+    let vLoc = stack.addText(location);
+    vLoc.font = Font.thinMonospacedSystemFont(10)
+    
+    let vData = stack.addText(data);
+    vData.textColor = Color.green();
+    
+    stack.addSpacer(5)
+
+}
+
+
+ let widget = await loadBY("https://rki-covid-api.now.sh/api/districts");
+        Script.setWidget(widget);
+        Script.complete();    
+        widget.presentLarge();
