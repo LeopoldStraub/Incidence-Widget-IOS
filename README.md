@@ -12,7 +12,7 @@ Corona Inzidenz Widget für Ipad/IPhone
 
 [RKI API nach Landkreis](https://rki-covid-api.now.sh/api/districts)  
 
-##Beispiel
+
 
   ![Datei_000](https://user-images.githubusercontent.com/42090755/110390176-e0699480-8065-11eb-84f3-2ef042edc61d.png)
 
