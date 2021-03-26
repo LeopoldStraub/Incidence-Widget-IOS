@@ -1,3 +1,5 @@
+
+
 async function loadBY(url){
     let param = 227;
     if(args.widgetParameter != null){
@@ -10,6 +12,13 @@ async function loadBY(url){
     let req = new Request(url);    
     let json = await req.loadJSON();
     let layout = new ListWidget();
+    
+    let stand = layout.addText("Stand:");
+    let standdata = layout.addText(json.lastUpdate);
+    stand.font = Font.thinMonospacedSystemFont(14);
+    standdata.font = Font.thinMonospacedSystemFont(14);
+    
+    layout.addSpacer(25);
     
     for(let i in param){
         console.log(param[i]);
